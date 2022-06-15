@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ReadMoreTextView">
+        <attr name="limit" format="integer">4</attr>
+        <attr name="hidden" format="boolean">true</attr>
+        <attr name="text" format="string">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie consequat pretium. Morbi ante velit, fringilla vel augue nec, pellentesque vestibulum lorem. Maecenas turpis orci, sollicitudin id condimentum eu, tristique in risus. Vivamus ultrices ac ante ac interdum.</attr>
+    </declare-styleable>
+</resources>
