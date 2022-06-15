@@ -1,7 +1,6 @@
-package io.github.kozemirov.readmoretextview;
+package io.github.kozemirov.readmoretextview.sample;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {

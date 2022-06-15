@@ -8,7 +8,6 @@ android {
     defaultConfig {
         minSdk 21
         targetSdk 32
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -26,7 +25,6 @@ android {
 }
 
 dependencies {
-
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'com.google.guava:guava:31.1-jre'
@@ -34,3 +32,21 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
+
+ext {
+    PUBLISH_GROUP_ID = 'io.github.kozemirov'
+    PUBLISH_VERSION = '1.0.0'
+    PUBLISH_ARTIFACT_ID = 'readmoretextview'
+    PUBLISH_DESCRIPTION = 'Android TextView with Read more/Show less'
+    PUBLISH_URL = 'https://github.com/kozemirov/ReadMoreTextView'
+    PUBLISH_LICENSE_NAME = 'MIT License'
+    PUBLISH_LICENSE_URL = 'https://github.com/kozemirov/ReadMoreTextView/blob/main/LICENSE'
+    PUBLISH_DEVELOPER_ID = 'kozemirov'
+    PUBLISH_DEVELOPER_NAME = 'Pavel'
+    PUBLISH_DEVELOPER_EMAIL = 'pskozemirov@gmail.com'
+    PUBLISH_SCM_CONNECTION = 'scm:git:github.com/kozemirov/ReadMoreTextView.git'
+    PUBLISH_SCM_DEVELOPER_CONNECTION = 'scm:git:ssh://github.com/kozemirov/ReadMoreTextView.git.git'
+    PUBLISH_SCM_URL = 'https://github.com/kozemirov/ReadMoreTextView.git/tree/main'
+}
+
+apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"
