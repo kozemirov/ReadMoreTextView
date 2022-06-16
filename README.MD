@@ -3,7 +3,9 @@ ReadMoreTextView
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.kozemirov/readmoretextview/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.kozemirov/readmoretextview)
 
 Straighforward Android UI lib implemented ReadMore/ShowLess TextView
-[![](https://user-images.githubusercontent.com/7889909/174015530-bbd6fe55-09b9-4c56-98b1-d682638dadc9.gif)
+
+
+![small_video](https://user-images.githubusercontent.com/7889909/174017753-af99dc9f-c766-4936-b2b3-77b743845236.gif)
 
 
 Dependency
