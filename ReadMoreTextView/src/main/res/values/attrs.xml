@@ -3,6 +3,11 @@
     <declare-styleable name="ReadMoreTextView">
         <attr name="limit" format="integer">4</attr>
         <attr name="hidden" format="boolean">true</attr>
+        <attr name="color" format="color">-7829368</attr>
+        <attr name="textSize" format="float">14</attr>
+        <attr name="justificationMode" format="integer">1</attr>
+        <attr name="readMoreText" format="string">Read More</attr>
+        <attr name="showLessText" format="string">Show Less</attr>
         <attr name="text" format="string">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie consequat pretium. Morbi ante velit, fringilla vel augue nec, pellentesque vestibulum lorem. Maecenas turpis orci, sollicitudin id condimentum eu, tristique in risus. Vivamus ultrices ac ante ac interdum.</attr>
     </declare-styleable>
 </resources>

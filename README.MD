@@ -12,7 +12,7 @@ Dependency
 --------
 
 ```groovy
-implementation 'io.github.kozemirov:readmoretextview:1.0.0'
+implementation 'io.github.kozemirov:readmoretextview:latest.release.here'
 ```
 
 Usage
@@ -21,11 +21,17 @@ Usage
 ```xml
 
 <io.github.kozemirov.readmoretextview.ReadMoreTextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    custom:text="@string/lorem_ipsum"
-    custom:limit="4"
-    custom:hidden="true"
+        android:id="@+id/readMoreTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:text="Lorem ipsum"
+        app:color="@color/black"
+        app:textSize="12"
+        app:justificationMode="1"
+        app:readMoreText="Read More"
+        app:showLessText="Show Less"
+        app:limit="5"
+        app:hidden="true"
 />
 ```
 
