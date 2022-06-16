@@ -37,7 +37,6 @@ public class ReadMoreTextView extends LinearLayoutCompat {
             text = a.getString(R.styleable.ReadMoreTextView_text);
             showLessText = a.getString(R.styleable.ReadMoreTextView_showLessText);
             readMoreText = a.getString(R.styleable.ReadMoreTextView_readMoreText);
-            text = a.getString(R.styleable.ReadMoreTextView_text);
             hide = a.getBoolean(R.styleable.ReadMoreTextView_hidden, true);
             lineLimit = a.getInteger(R.styleable.ReadMoreTextView_limit, 4);
             textSize = a.getFloat(R.styleable.ReadMoreTextView_textSize, 12);
@@ -88,5 +87,16 @@ public class ReadMoreTextView extends LinearLayoutCompat {
                 hide = true;
             }
         });
+    }
+
+    public void setText(String text) {
+        if (des != null)
+            des.setText(text);
+    }
+
+    public String getText() {
+        if (des != null)
+            return (String) des.getText();
+        return "";
     }
 }
