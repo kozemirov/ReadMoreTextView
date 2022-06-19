@@ -2,6 +2,7 @@
 <resources>
     <declare-styleable name="ReadMoreTextView">
         <attr name="limit" format="integer">4</attr>
+        <attr name="newLineIndent" format="integer">0</attr>
         <attr name="hidden" format="boolean">true</attr>
         <attr name="color" format="color">-7829368</attr>
         <attr name="textSize" format="float">14</attr>

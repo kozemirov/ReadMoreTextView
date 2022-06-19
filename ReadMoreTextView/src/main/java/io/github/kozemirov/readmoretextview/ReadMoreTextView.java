@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.widget.LinearLayoutCompat;
 
+import java.util.Collections;
+
 /**
  * Created by pavel on 15.06.2022.
  */
@@ -27,6 +29,7 @@ public class ReadMoreTextView extends LinearLayoutCompat {
     int justification;
     String showLessText;
     String readMoreText;
+    int newLinesIndentSize = 0;
 
     public ReadMoreTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -42,6 +45,7 @@ public class ReadMoreTextView extends LinearLayoutCompat {
             textSize = a.getFloat(R.styleable.ReadMoreTextView_textSize, 12);
             textColor = a.getColor(R.styleable.ReadMoreTextView_color, Color.GRAY);
             justification = a.getInteger(R.styleable.ReadMoreTextView_justificationMode, 1);
+            newLinesIndentSize = a.getInteger(R.styleable.ReadMoreTextView_newLineIndent, 0);
         } finally {
             a.recycle();
         }
@@ -58,7 +62,8 @@ public class ReadMoreTextView extends LinearLayoutCompat {
         des = parent.findViewById(R.id.description);
         button = parent.findViewById(R.id.button);
 
-        des.setText(text);
+
+        des.setText(addIndentsForNewLines(text));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             des.setJustificationMode(justification);
         }
@@ -89,9 +94,16 @@ public class ReadMoreTextView extends LinearLayoutCompat {
         });
     }
 
+    private String addIndentsForNewLines(String text) {
+        String indent = String.join("",Collections.nCopies(newLinesIndentSize, "\t"));
+        text = new StringBuilder(text).insert(0, indent).toString();
+        text = text.replaceAll("\n", "\n"+indent);
+        return text;
+    }
+
     public void setText(String text) {
         if (des != null)
-            des.setText(text);
+            des.setText(addIndentsForNewLines(text));
     }
 
     public String getText() {

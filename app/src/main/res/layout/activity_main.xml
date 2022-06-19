@@ -25,6 +25,7 @@
         app:showLessText="Show Less"
         app:limit="5"
         app:hidden="true"
+        app:newLineIndent="2"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
